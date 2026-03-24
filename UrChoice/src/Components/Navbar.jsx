@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.svg";
 
 const navItems = [
-  { label: "Inicio", icon: Home, target: "background" },
+  { label: "Inicio", icon: Home, target: "inicio" },
   { label: "Features", icon: Gamepad2, target: "features" },
-  { label: "Tools", icon: Wrench, target: "footer" },
+  { label: "Tools", icon: Wrench, target: "tools" },
 ];
 
 function Navbar() {
