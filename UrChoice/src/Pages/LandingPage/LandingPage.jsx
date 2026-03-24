@@ -1,11 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import Features from "../../Components/Features";
+import FeaturesSection from "../../Components/FeaturesSection";
 import Navbar from "../../Components/Navbar";
 import HeroSection from "../../Components/HeroSection";
-import Description from "../../Components/Description";
-import CategoryCards from "../../Components/CategoryCards";
-import NewPlayButton from "../../Components/NewPlayButton";
+import DescriptionSection from "../../Components/DescriptionSection";
+import CategoriesSection from "../../Components/CategoriesSection";
+import CTASection from "../../Components/CTASection";
 import Footer from "../../Components/Footer";
 
 
@@ -22,10 +22,11 @@ function LandingPage() {
 
             <Navbar />
             <HeroSection />
-            <Description />
-            <CategoryCards />
-            <Features />
-            <NewPlayButton />
+            <DescriptionSection />
+            <CategoriesSection />
+            <FeaturesSection />
+            <CTASection />
+  
             <Footer />
         </>
     );

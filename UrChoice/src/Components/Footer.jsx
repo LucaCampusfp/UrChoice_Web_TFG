@@ -1,69 +1,56 @@
-import Logo from '../assets/logo.svg';
+import logo from "@/assets/logo.svg";
 
-function Footer() {
-    return (
-        <footer
-            id='footer'
-            className="w-full rounded-2xl py-8 px-4 bg-gradient-to-r from-red-700 via-black to-cyan-600"
-        >
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
-                {/* Logo y marca */}
-                <div className="flex flex-col items-center md:items-start w-full md:w-auto mb-6 md:mb-0">
-                    <img
-                        src={Logo}
-                        alt="UrChoice Logo"
-                        className="w-24 sm:w-20 md:w-24 h-auto mb-2 transition-all"
-                    />
-                    <span className="text-gray-400 text-sm font-semibold">@urchoice</span>
-                </div>
+const Footer = () => {
+  return (
+    <footer
+      className="py-12 border-t border-border"
+      style={{ background: "var(--gradient-footer)" }}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-10">
+          {/* Brand */}
+          <div className="flex flex-col items-center md:items-start gap-3">
+            <img src={logo} alt="UrChoice logo" width={56} height={56} />
+            <span className="font-body text-muted-foreground text-sm">@urchoice</span>
+          </div>
 
-                {/* Enlaces de navegación en 3 columnas */}
-                <div className="flex flex-wrap justify-center gap-8 w-full md:w-auto">
-                    {[
-                        {
-                            title: 'Navegación',
-                            links: [
-                                { href: '#background', label: 'Inicio' },
-                                { href: '#testimonial', label: 'Descripción' },
-                                { href: '#categories', label: 'Categorías' },
-                            ],
-                        },
-                        {
-                            title: 'Características',
-                            links: [
-                                { href: '#features', label: 'Características' },
-                                { href: '#play', label: 'Jugar' },
-                                { href: '#footer', label: 'Contacto' },
-                            ],
-                        },
-                        {
-                            title: 'Redes',
-                            links: [
-                                { href: 'https://twitter.com/', label: 'Twitter', external: true },
-                                { href: 'https://instagram.com/', label: 'Instagram', external: true },
-                                { href: 'mailto:info@urchoice.com', label: 'Email' },
-                            ],
-                        },
-                    ].map((section, idx) => (
-                        <nav key={idx} className="flex flex-col items-center md:items-start">
-                            <span className="text-white font-bold mb-2">{section.title}</span>
-                            {section.links.map(({ href, label, external }) => (
-                                <a
-                                    key={label}
-                                    href={href}
-                                    target={external ? "_blank" : undefined}
-                                    rel={external ? "noopener noreferrer" : undefined}
-                                    className="text-gray-400 text-sm hover:text-cyan-300 transition-colors"
-                                >
-                                    {label}
-                                </a>
-                            ))}
-                        </nav>
-                    ))}
-                </div>
+          {/* Links */}
+          <div className="grid grid-cols-3 gap-12 text-sm font-body">
+            <div>
+              <h4 className="font-display text-xs font-semibold text-foreground tracking-widest uppercase mb-3">Navegación</h4>
+              <ul className="space-y-2">
+                <li><a href="#inicio" className="text-muted-foreground hover:text-primary transition-colors">Inicio</a></li>
+                <li><a href="#features" className="text-muted-foreground hover:text-primary transition-colors">Descripción</a></li>
+                <li><a href="#features" className="text-muted-foreground hover:text-primary transition-colors">Categorías</a></li>
+              </ul>
             </div>
-        </footer>
-    );
-}
+            <div>
+              <h4 className="font-display text-xs font-semibold text-foreground tracking-widest uppercase mb-3">Características</h4>
+              <ul className="space-y-2">
+                <li><a href="#features" className="text-muted-foreground hover:text-primary transition-colors">Características</a></li>
+                <li><a href="#inicio" className="text-muted-foreground hover:text-primary transition-colors">Jugar</a></li>
+                <li><a href="#tools" className="text-muted-foreground hover:text-primary transition-colors">Contacto</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-display text-xs font-semibold text-foreground tracking-widest uppercase mb-3">Redes</h4>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Twitter</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Instagram</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Email</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-10 pt-6 border-t border-border text-center">
+          <p className="font-body text-muted-foreground text-xs">
+            © {new Date().getFullYear()} UrChoice. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;
