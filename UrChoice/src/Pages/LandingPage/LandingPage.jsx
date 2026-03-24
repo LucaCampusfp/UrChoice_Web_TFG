@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Features from "../../Components/Features";
 import LandingHeader from "../../Components/LandingHeader";
 import HeroSection from "../../Components/HeroSection";
@@ -8,6 +8,7 @@ import CategoryCards from "../../Components/CategoryCards";
 import NewPlayButton from "../../Components/NewPlayButton";
 import Footer from "../../Components/Footer";
 import '../LandingPage/LandingPage.css';
+
 function LandingPage() {
     return (
         <>
@@ -19,15 +20,13 @@ function LandingPage() {
                 />
             </Helmet>
 
-            {/* <div className="min-h-[100vh] bg-black m-0 p-0 sm:min-h-[200vh]"> */}
-                <LandingHeader />
-                <HeroSection />
-                <Description />
-                <CategoryCards />
-                <Features />
-                <NewPlayButton />
-                <Footer />
-            {/* </div> */}
+            <LandingHeader />
+            <HeroSection />
+            <Description />
+            <CategoryCards />
+            <Features />
+            <NewPlayButton />
+            <Footer />
         </>
     );
 }
