@@ -20,7 +20,7 @@ const HeroSection = () => {
           src={heroCards}
           alt="UrChoice cartas coleccionables"
           width={1000}
-          height={1000}
+          height={100}
           className="opacity-30 animate-float"
         />
       </motion.div>

@@ -1,123 +1,16 @@
-@import "tailwindcss";
-
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-
-  background-color: black;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  color: #e0e0e0;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 20rem; /* aprox 320px */
-  min-height: 100vh;
-  background-color: black;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-h1 {
-  font-size: 3.2rem;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 0.5rem; /* 8px → 0.5rem */
-  border: 0.0625rem solid transparent; /* 1px → 0.0625rem */
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 0.25rem auto -webkit-focus-ring-color; /* 4px → 0.25rem */
-}
-
-/* Preferencias modo claro */
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #f5f5f5;
-  }
-  a:hover {
-    color: #747bff;
-  }
-}
-
-.scrollbar-custom {
-  scrollbar-width: thin;
-  scrollbar-color: #36b6cc #e53935;
-}
-
-.scrollbar-custom::-webkit-scrollbar {
-  width: 0.625rem; /* 10px → 0.625rem */
-  background: #e53935;
-}
-
-.scrollbar-custom::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #36b6cc, #e53935);
-  border-radius: 0.5rem;
-}
-
-.scrollbar-custom::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #e53935, #36b6cc);
-}
-
-/* Scrollbar general */
-::-webkit-scrollbar {
-  width: 0.5rem; /* 8px → 0.5rem */
-  height: 0.5rem;
-}
-
-::-webkit-scrollbar-track {
-  background: black;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #67e8f9, #ef4444);
-  border-radius: 9999px;
-  border: 0.125rem solid transparent; /* 2px → 0.125rem */
-  background-clip: content-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #22d3ee, #dc2626);
-}
-
-
-
-
-/*PROVENIENTE DE LOVABLE*/
+/* ============================================================
+   1️⃣ GOOGLE FONTS — Siempre lo primero, antes de todo
+   ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
+/* ============================================================
+   2️⃣ TAILWIND
+   ============================================================ */
+@import "tailwindcss";
 
-@tailwind utilities;
-
+/* ============================================================
+   3️⃣ VARIABLES CSS (design tokens)
+   ============================================================ */
 @layer base {
   :root {
     --background: 0 0% 4%;
@@ -165,6 +58,130 @@ button:focus-visible {
   }
 }
 
+/* ============================================================
+   4️⃣ ESTILOS BASE GLOBALES
+   ============================================================ */
+:root {
+  font-family: 'Rajdhani', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #e0e0e0;
+  background-color: black;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 20rem;
+  min-height: 100vh;
+  background-color: black;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  border-radius: 0.5rem;
+  border: 0.0625rem solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 0.25rem auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #f5f5f5;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+}
+
+/* ============================================================
+   5️⃣ SCROLLBAR PERSONALIZADA
+   ============================================================ */
+
+/* Scrollbar global */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #67e8f9, #ef4444);
+  border-radius: 9999px;
+  border: 0.125rem solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #22d3ee, #dc2626);
+}
+
+/* Scrollbar custom (clase utilitaria) */
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: #36b6cc #e53935;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 0.625rem;
+  background: #e53935;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #36b6cc, #e53935);
+  border-radius: 0.5rem;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #e53935, #36b6cc);
+}
+
+/* ============================================================
+   6️⃣ UTILIDADES
+   ============================================================ */
 @layer utilities {
   .text-gradient {
     background: var(--gradient-cyan-red);

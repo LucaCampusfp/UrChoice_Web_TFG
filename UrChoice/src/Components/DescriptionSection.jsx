@@ -1,4 +1,4 @@
-import '../Components/css/Descriptions.css'
+
 import { motion } from "framer-motion";
 
 const DescriptionSection = () => {
