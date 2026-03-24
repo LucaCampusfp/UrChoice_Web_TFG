@@ -1,67 +1,66 @@
-import Logo from '../assets/logoOpacity.svg';
-import { Gamepad2 } from 'lucide-react';
-import '../Components/css/HeroSection.css';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import { useNavigate } from 'react-router-dom';
+import { Gamepad2 } from "lucide-react";
+import { motion } from "framer-motion";
+import heroCards from "@/assets/hero-cards.png";
 
-function HeroSection() {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    const user = localStorage.getItem('user');
-    navigate(user ? '/HomePage' : '/Preloader');
-  };
-
+const HeroSection = () => {
   return (
-    <div
-      id="background"
-      className="bg-gradient-to-t from-cyan-300 via-transparent to-black flex justify-center items-center px-4"
+    <section
+      id="inicio"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+      style={{ background: "var(--gradient-hero)" }}
     >
-      <div className="relative w-full max-w-5xl min-h-[175px] sm:min-h-[250px] md:min-h-[350px] flex flex-col items-center justify-center overflow-visible">
-
-        {/* Imagen SVG responsiva */}
+      {/* Floating cards illustration */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+      >
         <img
-          src={Logo}
-          alt="Logo background"
-          className="absolute top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-             w-[80%] sm:w-[60%] md:w-[50%] lg:w-[40%] 
-             opacity-30 pointer-events-none object-contain h-auto"
+          src={heroCards}
+          alt="UrChoice cartas coleccionables"
+          width={1000}
+          height={1000}
+          className="opacity-30 animate-float"
         />
+      </motion.div>
 
+      <div className="relative z-10 text-center px-4">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground mb-4"
+        >
+          Ur<span className="text-gradient">Choice</span>
+        </motion.h1>
 
-        {/* Lotties */}
-        <DotLottieReact
-          className="absolute top-0 left-0 h-full w-full z-0"
-          src="https://lottie.host/9ad2756e-5d0c-4e48-be43-d964c37daea0/lz10b4JsWT.lottie"
-          loop
-          autoplay
-        />
-        <DotLottieReact
-          className="absolute top-0 left-0 h-full w-full z-0 rotate-180"
-          src="https://lottie.host/8f385097-1fd9-4e6b-8d84-ab7bb31d37db/nLLINWcew3.lottie"
-          loop
-          autoplay
-        />
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="font-body text-xl md:text-2xl text-muted-foreground mb-8"
+        >
+          Which will be your choice?
+        </motion.p>
 
-        {/* Contenido principal */}
-        <section className="relative z-10 flex flex-col items-center text-center px-4">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white drop-shadow-lg mb-2">UrChoice</h1>
-          <p className="opacity-70 text-xl sm:text-2xl font-bold text-white drop-shadow-2xl mb-6">
-            Which will be your choice?
-          </p>
-          <button
-            type="button"
-            onClick={handleClick}
-            className="flex items-center gap-2 bg-white text-black font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition"
-            aria-label="Play now"
-          >
-            <Gamepad2 size={24} />
-            <span>Play now</span>
-          </button>
-        </section>
+        <motion.a
+          href="https://urchoice.es"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="inline-flex items-center gap-3 px-8 py-4 rounded-lg font-display font-semibold text-lg text-primary-foreground transition-all duration-300 hover:scale-105 glow-cyan"
+          style={{ background: "var(--gradient-cta)" }}
+        >
+          <Gamepad2 size={22} />
+          Play now
+        </motion.a>
       </div>
-    </div>
+
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+    </section>
   );
-}
+};
 
 export default HeroSection;
