@@ -15,36 +15,37 @@ function HeroSection() {
   return (
     <div
       id="background"
-      className="bg-linear-to-t from-cyan-400 via-cyan-900/40 to-transparent flex justify-center items-center min-h-screen px-4 -mt-(--header-height,72px) pt-(--header-height,72px)"
+      className="bg-gradient-to-t from-cyan-300 via-transparent to-black flex justify-center items-center px-4"
     >
-      <div
-        className="relative w-full max-w-5xl flex flex-col items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `url(${Logo})`,
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-        }}
-      >
-        {/* Lottie fondo — ocupan solo lo que necesitan */}
+      <div className="relative w-full max-w-5xl min-h-[175px] sm:min-h-[250px] md:min-h-[350px] flex flex-col items-center justify-center overflow-visible">
+
+        {/* Imagen SVG responsiva */}
+        <img
+          src={Logo}
+          alt="Logo background"
+          className="absolute top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+             w-[80%] sm:w-[60%] md:w-[50%] lg:w-[40%] 
+             opacity-30 pointer-events-none object-contain h-auto"
+        />
+
+
+        {/* Lotties */}
         <DotLottieReact
-          className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+          className="absolute top-0 left-0 h-full w-full z-0"
           src="https://lottie.host/9ad2756e-5d0c-4e48-be43-d964c37daea0/lz10b4JsWT.lottie"
           loop
           autoplay
         />
         <DotLottieReact
-          className="absolute inset-0 w-full h-full z-0 rotate-180 pointer-events-none"
+          className="absolute top-0 left-0 h-full w-full z-0 rotate-180"
           src="https://lottie.host/8f385097-1fd9-4e6b-8d84-ab7bb31d37db/nLLINWcew3.lottie"
           loop
           autoplay
         />
 
         {/* Contenido principal */}
-        <section className="relative z-10 flex flex-col items-center text-center px-4 py-16 sm:py-24">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white drop-shadow-lg mb-2">
-            UrChoice
-          </h1>
+        <section className="relative z-10 flex flex-col items-center text-center px-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white drop-shadow-lg mb-2">UrChoice</h1>
           <p className="opacity-70 text-xl sm:text-2xl font-bold text-white drop-shadow-2xl mb-6">
             Which will be your choice?
           </p>
