@@ -10,4 +10,5 @@ createRoot(document.getElementById('root')).render(
       <App />
     </HelmetProvider>
   </StrictMode>,
+  //Ki ti pasa
 )
