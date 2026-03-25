@@ -19,7 +19,7 @@ const HeroSection = () => {
         <img
           src={heroCards}
           alt="UrChoice cartas coleccionables"
-          width={1000}
+          width={700}
           height={100}
           className="opacity-30 animate-float"
         />
