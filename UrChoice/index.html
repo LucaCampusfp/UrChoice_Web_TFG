@@ -1,18 +1,61 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="UrChoice, juego de las cartas multijugador online. Crea tus mazos personalizados, desafía amigos en partidas estratégicas y domina la comunidad con tus habilidades." />
-  <title>UrChoice - Juego multijugador de cartas y decisiones online</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="logo.png" /> 
-  <link rel="apple-touch-icon" sizes="180x180" href="logo.png" />
-  <link rel="preload" as="image" href="logo.png" />
-  <link rel="canonical" href="https://urchoice.es/" />
-  <meta name="theme-color" content="#ffffff" />
-</head>
-<body class="bg-gray-900">
-  <div id="root" role="main"></div>
-  <script type="module" src="./src/main.jsx"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Principal -->
+    <title>UrChoice - Crea tu mazo de cartas y juega con amigos</title>
+    <meta name="description" content="UrChoice es el juego de cartas online donde creas mazos personalizados, juegas con amigos y descubres las cartas favoritas de la comunidad. ¡Juega gratis!" />
+    <meta name="keywords" content="UrChoice, juego de cartas, card game, mazos personalizados, jugar con amigos, cartas coleccionables" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://urchoice.es/" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+
+    <!-- Theme color (barra del navegador en móvil) -->
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://urchoice.es/" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="UrChoice - Crea tu mazo de cartas y juega con amigos" />
+    <meta property="og:description" content="Crea mazos personalizados, juega con amigos y descubre las cartas favoritas de la comunidad. ¡Juega gratis!" />
+    <meta property="og:image" content="https://urchoice.es/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="UrChoice" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="UrChoice - Crea tu mazo de cartas y juega con amigos" />
+    <meta name="twitter:description" content="Crea mazos personalizados, juega con amigos y descubre las cartas favoritas de la comunidad. ¡Juega gratis!" />
+    <meta name="twitter:image" content="https://urchoice.es/og-image.jpg" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "UrChoice",
+      "url": "https://urchoice.es",
+      "description": "Juego de cartas online donde creas mazos personalizados, juegas con amigos y descubres las cartas favoritas de la comunidad.",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web",
+      "inLanguage": "es-ES",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
