@@ -18,21 +18,22 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/Preloader" element={<Preloader />} />
+        {/* <Route path="/Preloader" element={<Preloader />} />
         <Route path="/Tap_to_start" element={<TapToStart />} />
         <Route path="/InitialPage" element={<InitialPage />} />
         <Route path="/LogInPage" element={<LogInPage />} />
-        <Route path="/RegisterPage" element={<RegisterPage />} />
+        <Route path="/RegisterPage" element={<RegisterPage />} /> */}
 
         {/* Rutas anidadas para el layout de HomePage */}
-        <Route path="/HomePage" element={<HomePage />}>
-          <Route index element={<TabView />} /> {/* Usa el componente importado */}
-          <Route path="Biblioteca" element={<Biblioteca />} />
+        {/* <Route path="/HomePage" element={<HomePage />}>
+          <Route index element={<TabView />} />  */}
+          {/* Usa el componente importado */}
+          {/* <Route path="Biblioteca" element={<Biblioteca />} />
           <Route path="User" element={<User />} />
-        </Route>
+        </Route> */}
 
-        <Route path="/GamePage" element={<Game />} />
-        <Route path="/IndividualGame" element={<Individual />} />
+        {/* <Route path="/GamePage" element={<Game />} />
+        <Route path="/IndividualGame" element={<Individual />} /> */}
         <Route path="/*" element={<Error />} />
       </Routes>
     </Router>
