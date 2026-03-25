@@ -2,7 +2,15 @@
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'], // Asegúrate de incluir tus archivos
   theme: {
-    fontFamily: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      fontFamily: {
         display: ["Orbitron", "sans-serif"],
         body: ["Rajdhani", "sans-serif"],
       },
@@ -74,5 +82,6 @@ export default {
   },
   plugins: [
     require('tailwind-scrollbar'), // Agrega el plugin aquí
+    require("tailwindcss-animate")
   ],
 };
