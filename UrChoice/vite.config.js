@@ -18,4 +18,16 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    cssCodeSplit: false,      // un solo CSS para evitar múltiples requests
+    cssMinify: 'lightningcss', // minificación más agresiva
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'], // separa vendor del app code
+        }
+      }
+    }
+
+  }
 })
