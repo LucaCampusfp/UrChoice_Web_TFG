@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import categoryFootball from "@/assets/category-football.jpg";
-import categoryFate from "@/assets/category-fate.jpg";
-import categoryAnime from "@/assets/category-anime.jpg";
+import categoryFootball from "@/assets/category-football.webp";
+import categoryFate from "@/assets/category-fate.webp";
+import categoryAnime from "@/assets/category-anime.webp";
 
 const categories = [
   { name: "Football", desc: "Elige tu equipo de fútbol favorito", image: categoryFootball },

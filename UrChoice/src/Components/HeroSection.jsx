@@ -1,6 +1,6 @@
 import { Gamepad2 } from "lucide-react";
 import { motion } from "framer-motion";
-import heroCards from "@/assets/hero-cards.png";
+import heroCards from "@/assets/hero-cards.webp";
 
 const HeroSection = () => {
   return (

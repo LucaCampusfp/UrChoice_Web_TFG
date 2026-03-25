@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import featureMultiplayer from "@/assets/feature-multiplayer.jpg";
-import featureDecks from "@/assets/feature-decks.jpg";
-import featureCollection from "@/assets/feature-collection.jpg";
+import featureMultiplayer from "@/assets/feature-multiplayer.webp";
+import featureDecks from "@/assets/feature-decks.webp";
+import featureCollection from "@/assets/feature-collection.webp";
 
 const features = [
   {
