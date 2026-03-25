@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import UrChoiceLogo from '../Preloader/LogoTodoSVG.svg';
-import '../Preloader/Preloader.css'; // Asegúrate de importar Tailwind CSS
+//import '../Preloader/Preloader.css'; // Asegúrate de importar Tailwind CSS
 import { Link } from 'react-router-dom';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 

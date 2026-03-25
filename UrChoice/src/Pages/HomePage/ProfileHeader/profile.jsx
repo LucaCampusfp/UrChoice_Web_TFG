@@ -1,5 +1,5 @@
 import React from 'react';
-import './profile.css';
+//import './profile.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from './logoHeader.png';

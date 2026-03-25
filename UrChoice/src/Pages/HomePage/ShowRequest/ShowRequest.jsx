@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { MailWarning } from 'lucide-react';
-import './showrequest.css';
+//import './showrequest.css';
 
 const MailBar = () => {
     const mailDialogRef = useRef(null);

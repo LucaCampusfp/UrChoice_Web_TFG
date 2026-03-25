@@ -1,8 +1,0 @@
-@import "tailwindcss";
-
-
-@media (max-width: 640px) {
-    html, body {
-        min-height: 400vh;
-    }
-}

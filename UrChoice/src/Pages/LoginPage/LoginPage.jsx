@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { useNavigate } from 'react-router-dom';
-import '../LoginPage/LoginPage.css';
-import Logo from '../LoginPage/logo.png'; // Esto es para la imagen por defecto del logo
+//import '../LoginPage/LoginPage.css';
+import Logo from '../LoginPage/logo.svg'; // Esto es para la imagen por defecto del logo
 
 function LogInPage() {
   

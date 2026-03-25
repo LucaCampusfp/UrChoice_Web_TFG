@@ -1,4 +1,4 @@
-import "./home_category_card.css";
+//import "./home_category_card.css";
 import React, { useEffect, useState } from 'react';
 import { Heart, Bookmark } from 'lucide-react';
 import Altera from "./altera_final.gif";

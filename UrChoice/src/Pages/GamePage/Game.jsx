@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import "./Game.css";
+//import "./Game.css";
 import NextRound from "../GamePage/NextRoundDialog/NextRound";
 import WinnerDialog from "../GamePage/WinnerDialog/winner";
 import GameStartCountdown from "./GameStartCountdown/GameStartCountdown";

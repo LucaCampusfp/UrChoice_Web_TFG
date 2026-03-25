@@ -1,8 +1,0 @@
-dialog button{
-    background-color: cyan;
-   
-}
-
-dialog form>button{
-    border: 8px solid cyan;
-}

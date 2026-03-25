@@ -2,8 +2,8 @@ import UrChoiceLogo from '../RegisterPage/LogoTodoSVG.svg';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../RegisterPage/RegisterPage.css';
-import Logo from '../LoginPage/logo.png';
+//import '../RegisterPage/RegisterPage.css';
+import Logo from '../LoginPage/logo.svg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

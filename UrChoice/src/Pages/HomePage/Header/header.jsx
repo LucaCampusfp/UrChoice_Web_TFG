@@ -1,6 +1,6 @@
 import { useState } from "react";
-import './header.css';
-import Logo from './logo.png';
+//import './header.css';
+import Logo from './logo.svg';
 import ProfileHeader from "../ProfileHeader/profile";
 import CreateRoom from "./CreateRoomDialog/CreateRoom";
 import CrearCategory from "./CreateCategory/CreateCategory"

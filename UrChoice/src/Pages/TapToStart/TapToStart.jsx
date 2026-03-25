@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import UrChoiceLogo from '../TapToStart/LogoTodoSVG.svg';
-import '../TapToStart/TapToStart.css'; // Asegúrate de importar Tailwind CSS
+//import '../TapToStart/TapToStart.css'; // Asegúrate de importar Tailwind CSS
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function TapToStart() {
