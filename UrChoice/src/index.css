@@ -1,7 +1,53 @@
 /* ============================================================
-   1️⃣ GOOGLE FONTS — Siempre lo primero, antes de todo
+   1️⃣ FUENTES LOCALES
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* Orbitron — Variable Font (cubre todos los pesos) */
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/Fonts/Orbitron-VariableFont_wght.woff2') format('woff2 supports variations'),
+       url('/Fonts/Orbitron-VariableFont_wght.woff2') format('woff2');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Rajdhani */
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/Fonts/Rajdhani-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/Fonts/Rajdhani-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/Fonts/Rajdhani-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/Fonts/Rajdhani-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/Fonts/Rajdhani-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ============================================================
    2️⃣ TAILWIND
@@ -147,8 +193,6 @@ button:focus-visible {
 /* ============================================================
    5️⃣ SCROLLBAR PERSONALIZADA
    ============================================================ */
-
-/* Scrollbar global */
 ::-webkit-scrollbar {
   width: 0.5rem;
   height: 0.5rem;
@@ -169,7 +213,6 @@ button:focus-visible {
   background: linear-gradient(to bottom, #22d3ee, #dc2626);
 }
 
-/* Scrollbar custom (clase utilitaria) */
 .scrollbar-custom {
   scrollbar-width: thin;
   scrollbar-color: #36b6cc #e53935;
