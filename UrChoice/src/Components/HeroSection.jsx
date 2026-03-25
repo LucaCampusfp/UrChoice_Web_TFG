@@ -17,11 +17,14 @@ const HeroSection = () => {
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
       >
         <img
-          src={heroCards}
+          src={heroCards  }
           alt="UrChoice cartas coleccionables"
-          width={700}
-          height={100}
-          className="opacity-30 animate-float"
+          width="700"
+          height="100"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+          class="opacity-30 animate-float"
         />
       </motion.div>
 
@@ -52,7 +55,7 @@ const HeroSection = () => {
           className="inline-flex items-center gap-3 px-8 py-4 rounded-lg font-display font-semibold text-lg text-primary-foreground transition-all duration-300 hover:scale-105 glow-cyan"
           style={{ background: "var(--gradient-cta)" }}
         >
-          <Gamepad2 size={22} className="text-black"/>
+          <Gamepad2 size={22} className="text-black" />
           <span className="text-black">Play now</span>
         </motion.a>
       </div>
