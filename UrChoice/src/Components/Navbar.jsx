@@ -70,7 +70,7 @@ function Navbar() {
               {navItems.map((item) => (
                 <li key={item.label}>
                   <button
-                    onClick={() => { scrollToSection(item.target); setMobileMenu(false); }}
+                    onClick={() => { setMobileMenu(false); setTimeout(() => scrollToSection(item.target), 300); }}
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-lg font-medium font-body bg-transparent border-none cursor-pointer w-full text-left"
                   >
                     <item.icon size={18} />

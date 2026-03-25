@@ -52,8 +52,8 @@ const HeroSection = () => {
           className="inline-flex items-center gap-3 px-8 py-4 rounded-lg font-display font-semibold text-lg text-primary-foreground transition-all duration-300 hover:scale-105 glow-cyan"
           style={{ background: "var(--gradient-cta)" }}
         >
-          <Gamepad2 size={22} />
-          Play now
+          <Gamepad2 size={22} className="text-black"/>
+          <span className="text-black">Play now</span>
         </motion.a>
       </div>
 

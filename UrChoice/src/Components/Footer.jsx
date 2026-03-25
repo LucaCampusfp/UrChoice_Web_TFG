@@ -7,7 +7,7 @@ const Footer = () => {
       style={{ background: "var(--gradient-footer)" }}
     >
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-10">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start gap-3">
             <img src={logo} alt="UrChoice logo" width={56} height={56} />
